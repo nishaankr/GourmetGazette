@@ -21,7 +21,7 @@
     <div v-if="!user" class="updates">
       <div class="container">
         <h2>Never miss a food post. Register for your free account today!</h2>
-        <router-link class="router-button" to="#">
+        <router-link class="router-button" to="Register">
           Register for Gourmet Gazette <Arrow class="arrow arrow-light" />
         </router-link>
       </div>

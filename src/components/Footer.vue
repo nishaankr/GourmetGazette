@@ -3,7 +3,9 @@
     <div class="container">
       <div class="left">
         <div class="col-1">
-          <router-link class="header" :to="{ name: 'Home' }">Gourmet Gazette.</router-link>
+          <router-link class="header" :to="{ name: 'Home' }"
+            >Gourmet Gazette.</router-link
+          >
           <ul>
             <li>
               <a href="#"><youTube class="svg-icon"/></a>
@@ -22,9 +24,15 @@
         <div class="col-2">
           <ul>
             <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
-            <router-link class="link" :to="{ name: 'Blogs' }">Blogs</router-link>
-            <router-link v-if="admin" class="link" :to="{ name: 'CreatePost' }">Create Post</router-link>
-            <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login In / Register</router-link>
+            <router-link class="link" :to="{ name: 'Blogs' }"
+              >Blogs</router-link
+            >
+            <router-link v-if="admin" class="link" :to="{ name: 'CreatePost' }"
+              >Create Post</router-link
+            >
+            <router-link v-if="!user" class="link" :to="Login"
+              >Login In / Register</router-link
+            >
           </ul>
         </div>
       </div>
@@ -63,7 +71,7 @@ export default {
 footer {
   margin-top: auto;
   padding: 100px 25px;
-  background-color: #303030;
+  background-color: #5d5be2;
   .container {
     display: flex;
     flex-direction: column;
@@ -92,9 +100,10 @@ footer {
 
       .header {
         text-align: center;
-        font-size: 24px;
+        font-size: 30px;
         color: #fff;
         margin-bottom: 16px;
+        font-family: "Pacifico", cursive;
         text-decoration: none;
         font-weight: 600;
         @media (min-width: 800px) {

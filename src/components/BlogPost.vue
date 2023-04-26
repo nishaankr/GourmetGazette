@@ -6,16 +6,28 @@
         <h2 v-else>{{ post.blogTitle }}</h2>
         <p v-if="post.welcomeScreen">{{ post.blogPost }}</p>
         <p class="content-preview" v-else v-html="post.blogHTML"></p>
-        <router-link class="link link-light" v-if="post.welcomeScreen" to="#">
+        <router-link
+          class="link link-light"
+          v-if="post.welcomeScreen"
+          to="Login"
+        >
           Login/Register<Arrow class="arrow arrow-light" />
         </router-link>
-        <router-link class="link" v-else :to="{ name: 'ViewBlog', params: { blogid: this.post.blogID } }">
+        <router-link
+          class="link"
+          v-else
+          :to="{ name: 'ViewBlog', params: { blogid: this.post.blogID } }"
+        >
           View The Post<Arrow class="arrow" />
         </router-link>
       </div>
     </div>
     <div class="blog-photo">
-      <img v-if="post.welcomeScreen" :src="require(`../assets/blogPhotos/${post.photo}.jpg`)" alt="" />
+      <img
+        v-if="post.welcomeScreen"
+        :src="require(`../assets/blogPhotos/${post.photo}.jpg`)"
+        alt=""
+      />
       <img v-else :src="post.blogCoverPhoto" alt="" />
     </div>
   </div>
@@ -41,7 +53,8 @@ export default {
 .blog-wrapper {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   @media (min-width: 700px) {
     min-height: 650px;
     max-height: 650px;
@@ -53,6 +66,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #0e0000;
     flex: 4;
     order: 2;
     @media (min-width: 700px) {
@@ -70,12 +84,12 @@ export default {
       }
 
       h2 {
-        font-size: 32px;
-        font-weight: 300;
+        font-size: 40px;
+        font-weight: 500;
         text-transform: uppercase;
         margin-bottom: 24px;
         @media (min-width: 700px) {
-          font-size: 40px;
+          font-size: 50px;
         }
       }
 
@@ -86,9 +100,9 @@ export default {
       }
 
       .content-preview {
-        font-size: 13px;
-        max-height: 24px;
-        width: 250px;
+        font-size: 20px;
+        max-height: 70px;
+        width: 500px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -103,7 +117,7 @@ export default {
         transition: 0.5s ease-in all;
 
         &:hover {
-          border-bottom-color: #303030;
+          border-bottom-color: #140202;
         }
       }
 
@@ -118,7 +132,8 @@ export default {
   .blog-photo {
     order: 1;
     flex: 3;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
     @media (min-width: 700px) {
       order: 2;
