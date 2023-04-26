@@ -3,7 +3,7 @@
     <nav class="container">
       <div class="branding">
         <router-link class="header" :to="{ name: 'Home' }"
-          >FireBlogs</router-link
+          >Gourmet Gazette</router-link
         >
       </div>
       <div class="nav-links">
@@ -142,6 +142,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 header {
   background-color: #fff;
   padding: 0 25px;
@@ -155,7 +156,7 @@ header {
     transition: 0.3s color ease;
 
     &:hover {
-      color: #1eb8b8;
+      color: #d6132d;
     }
   }
 
@@ -169,9 +170,11 @@ header {
 
       .header {
         font-weight: 600;
-        font-size: 24px;
-        color: #000;
+        font-size: 30px;
+        //color: #000;
+        color: #d6132d;
         text-decoration: none;
+        font-family: "Pacifico", cursive;
       }
     }
 
@@ -181,6 +184,8 @@ header {
       flex: 1;
       align-items: center;
       justify-content: flex-end;
+      font-size: 20px;
+      font-weight: bold;
 
       ul {
         margin-right: 32px;
@@ -200,11 +205,11 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         color: #fff;
-        background-color: #303030;
+        background-color: #d6132d;
 
         span {
           pointer-events: none;
@@ -230,7 +235,7 @@ header {
               width: 40px;
               height: 40px;
               background-color: #fff;
-              color: #303030;
+              color: #d6132d;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -301,7 +306,7 @@ header {
     flex-direction: column;
     position: fixed;
     height: 100%;
-    background-color: #303030;
+    background-color: #d6132d;
     top: 0;
     left: 0;
 
