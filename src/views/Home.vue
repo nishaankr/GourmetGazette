@@ -43,7 +43,7 @@ export default {
         blogPost:
           "Weekly mouth watering posts with complete guides and recipes. Register today to never miss a recipe!",
         welcomeScreen: true,
-        photo: "coding",
+        photo: "food",
       },
     };
   },
