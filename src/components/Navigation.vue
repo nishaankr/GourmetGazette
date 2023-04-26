@@ -171,7 +171,6 @@ header {
       .header {
         font-weight: 600;
         font-size: 30px;
-        //color: #000;
         color: #d6132d;
         text-decoration: none;
         font-family: "Pacifico", cursive;
